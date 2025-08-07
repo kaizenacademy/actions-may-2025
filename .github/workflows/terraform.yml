@@ -39,7 +39,7 @@ jobs:
         ami_id = "${{ inputs.ami_id }}"
         instance_type = "${{ inputs.instance_type }}"
         region = "${{ inputs.region }}"
-        EOF     
+        EOF
 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
