@@ -3,12 +3,28 @@ on:
   workflow_dispatch:
     inputs:
       action:
-        descritpion: "Select your choice"
+        description: "Select your choice"
         required: true
         type: choice
         options:
         - apply
         - destroy
+
+      region:
+        description: "Provide region"
+        required: true
+        type: choice
+        options:
+        - us-east-1
+        - us-east-2
+        
+      ami_id:
+        description: "Provide AMI ID"
+        required: true
+
+      instance_type:
+        description: "Provide Instance Type"
+        required: true
 
 jobs:
   deploy:
