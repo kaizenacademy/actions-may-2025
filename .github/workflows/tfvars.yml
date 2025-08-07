@@ -29,9 +29,6 @@ jobs:
     - name: Create tfvars file
       run: echo "${{ vars.TFVARS }}" > terraform.tfvars
 
-    - name: Test
-      run: cat terraform.tfvars
-
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
       with:
