@@ -1,7 +1,0 @@
-|
-        if [[ "${{ inputs.action }}" == "apply" ]]
-        then
-          terraform apply -auto-approve
-        else
-          terraform destroy -auto-approve
-        fi
