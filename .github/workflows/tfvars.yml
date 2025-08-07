@@ -27,8 +27,8 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Create tfvars file
-      run: printf "%s" "${{ vars.TFVARS }}" > terraform.tfvars
-      #echo -e "${{ vars.TFVARS }}" > terraform.tfvars
+      run: echo "${{ vars.TFVARS }}" > terraform.tfvars
+      #printf "%s" "${{ vars.TFVARS }}" > terraform.tfvars
 
     - name: Test
       run: cat terraform.tfvars
